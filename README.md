@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-Chongchong and I have developed a new YT frontend for the `QUOKKA` dataset, enabling seamless integration with YT's data structures and visualization capabilities.
+[Chongchong](https://github.com/chongchonghe) and [I](https://github.com/Rongjun-ANU) have developed a new YT frontend for the `QUOKKA` dataset, enabling seamless integration with YT's data structures and visualization capabilities.
 
 ## 2. Features
 
