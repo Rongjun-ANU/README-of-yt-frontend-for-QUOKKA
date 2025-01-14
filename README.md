@@ -9,11 +9,11 @@
 ### **Header Management**
 - **Dynamic Field Detection**:
   - Automatically detects and loads:
-    - Six essential gas fields (density, energy, internal energy, and x/y/z-momentum)
-    - Optional fields, including temperature, scalar, radiation, and magnetic fields (currently a placeholder)
+    - Six mandatory gas fields (density, energy, internal energy, and x/y/z-momentum)
+    - Optional fields, including temperature, scalar, radiation, and magnetic (currently a placeholder) fields 
   - **Units Management**:
     - Maps field names to (field_type, field_name) tuples, e.g., `('boxlib', 'gasDensity')` becomes `('gas', 'density')`.
-    - Assigns physical units to dimensionless native fields.
+    - Assigns physical units to dimensionless (or `code_unit`) native fields.
 
 ### **Metadata Management**
 - Reads `metadata.yaml` for simulation parameters.
@@ -36,12 +36,12 @@
      - Particle information parsing.
 3. **`QuokkaFieldInfo`**:
    - Add `/yt/frontends/amrex/fields.py` to manage:
-     - Gas, derived, and particle fields.
+     - Derived, and particle fields.
 4. Import the above modules in `/yt/frontends/amrex/api.py`.
 
 ## 4. Requirements
 
-Ensure you use the modified `yt` version available [here](https://github.com/chongchonghe/yt).
+Ensure you use the modified `yt` version available [here](https://github.com/chongchonghe/yt). 
 
 ## 5. Explanation
 
@@ -79,13 +79,13 @@ dataset_folder/
 ├── Level_0/
 ├── Header
 ├── metadata.yaml
-├── XXX_particles/     # Particle fields (e.g., Rad or Sink)
+├── XXX_particles/     # Particle fields (e.g., Rad or Sink or CIC)
 │   ├── Fields.json    # Particle field names and units
 │   ├── Header
 │   └── Level_0/
 ```
 
-The `Fields.json` file specifies particle fields and units, expressed using four fundamental units (`M`, `L`, `T`, and `Θ`).
+The `Fields.json` file specifies particle fields and units, expressed using four fundamental units (`M`, `L`, `T`, and `Θ` for mass, length, time and temperature).
 
 Example `Fields.json`:
 
@@ -175,15 +175,15 @@ unyt_array([1., 1., 1., ..., 1., 1., 1.], 'g/cm**3')
 
 The reason for converting native `boxlib` fields to derived fields with physical units is to ensure compatibility with many Python packages built on `yt`. These packages require field tuples in the form of `('type', 'field_name')` and expect proper physical units. Native `boxlib` fields and `code_unit` formats are not supported in such cases.
 
-### **5.4 Metadata Parsing**
-Simulation metadata can be accessed via:
+### **5.4 Other Header and Metadata Parsing**
+All details from `Header` and `metadata.yaml` can be accessed via:
 ```python
 ds.parameters
 ```
 
 ### **5.5 Visualizations**
 
-Visualize gas density on the x-y plane:
+Plot gas density on the x-y plane:
 ```python
 yt.SlicePlot(ds, 'z', ('gas', 'density'))
 ```
