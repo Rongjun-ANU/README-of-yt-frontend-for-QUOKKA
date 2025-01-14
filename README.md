@@ -244,7 +244,7 @@ import yt
 yt.set_log_level("DEBUG")
 ```
 
-## 7. Experience
+## 7. Experiment
 
 If for some reason your `QUOKKA` dataset is missing `metadata.yaml` and thus fails to be recognised as a `QUOKKA` dataset by `yt`, you may manually add a `metadata.yaml` in your dataset. Or, you may try:
 
