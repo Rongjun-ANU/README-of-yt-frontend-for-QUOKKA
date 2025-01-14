@@ -201,7 +201,7 @@ yt.SlicePlot(ds, 'z', ('gas', 'density'))
 
 And we get
 
-![image-20250114194056391](/Users/maclaptop29/Library/Application Support/typora-user-images/image-20250114194056391.png)
+![gasDensity](https://github.com/Rongjun-ANU/ytdev.README/blob/main/gasDensity.png)
 
 Or if `rad` fields are included, we can try 
 
@@ -209,7 +209,7 @@ Or if `rad` fields are included, we can try
 yt.SlicePlot(ds, 'z', ('rad', 'energy_density_0'))
 ```
 
-![image-20250114194036515](/Users/maclaptop29/Library/Application Support/typora-user-images/image-20250114194036515.png)
+![radEnergy](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radEnergy.png)
 
 Or if radiating particles are included, we may try
 
@@ -217,7 +217,7 @@ Or if radiating particles are included, we may try
 yt.SlicePlot(ds, "z", ('rad', 'energy_density_0'), center='c').set_cmap(('rad', 'energy_density_0'), 'hot').annotate_particles(1, p_size=400., col='blue', marker='*', ptype='Rad_particles')
 ```
 
-![image-20250114195202535](/Users/maclaptop29/Library/Application Support/typora-user-images/image-20250114195202535.png)
+![radParticle](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radParticle.png)
 
 ## 6. Usage
 
