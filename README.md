@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[Chongchong](https://github.com/chongchonghe) and [I](https://github.com/Rongjun-ANU) have developed a new [`YT`](https://github.com/yt-project/yt) frontend for the [`QUOKKA`](https://github.com/quokka-astro/quokka) dataset, enabling seamless integration with YT's data structures and visualization capabilities.
+[Chongchong](https://github.com/chongchonghe) and [I](https://github.com/Rongjun-ANU) have developed a new [`yt`](https://github.com/yt-project/yt) frontend for the [`QUOKKA`](https://github.com/quokka-astro/quokka) dataset, enabling seamless integration with `yt`'s data structures and visualization capabilities.
 
 ## 2. Features
 
@@ -154,6 +154,26 @@ Derived:
  ('rad', 'flux_density_y_0'),
  ('rad', 'flux_density_z_0')]
 ```
+
+Since all the native `boxlib` fields do not contain physical units in the dataset, we add corresponding units to their derived counterparts. For example, when accessing the gas density field:
+
+```python
+ds.r[('boxlib', 'gasDensity')]
+```
+The output will be:
+```python
+unyt_array([1., 1., 1., ..., 1., 1., 1.], 'code_mass/code_length**3')
+```
+However, if we access the derived field:
+```python
+ds.r[('gas', 'density')]
+```
+The output will include physical units:
+```python
+unyt_array([1., 1., 1., ..., 1., 1., 1.], 'g/cm**3')
+```
+
+The reason for converting native `boxlib` fields to derived fields with physical units is to ensure compatibility with many Python packages built on `yt`. These packages require field tuples in the form of `('type', 'field_name')` and expect proper physical units. Native `boxlib` fields and `code_unit` formats are not supported in such cases.
 
 ### **5.4 Metadata Parsing**
 Simulation metadata can be accessed via:
