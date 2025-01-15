@@ -199,9 +199,7 @@ yt.SlicePlot(ds, 'z', ('rad', 'energy_density_0'))
 
 For particles:
 ```python
-yt.SlicePlot(ds, "z", ('rad', 'energy_density_0'), center='c')
-.set_cmap(('rad', 'energy_density_0'), 'hot')
-.annotate_particles(1, p_size=400., col='blue', marker='*', ptype='Rad_particles')
+yt.SlicePlot(ds, "z", ('rad', 'energy_density_0'), center='c').set_cmap(('rad', 'energy_density_0'), 'hot').annotate_particles(1, p_size=400., col='blue', marker='*', ptype='Rad_particles')
 ```
 
 ![radParticle](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radParticle.png)
