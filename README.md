@@ -16,8 +16,8 @@
     - Assigns physical units to dimensionless (or `code_unit`) native fields.
 
 ### **Metadata Management**
+- Parses `Header` file for fields' information.
 - Reads `metadata.yaml` for simulation parameters.
-- Parses header files for field information.
 - Handles multi-dimensional data structures.
 
 ### **Particle Support**
