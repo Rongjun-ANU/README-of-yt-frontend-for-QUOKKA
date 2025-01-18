@@ -90,7 +90,7 @@ The `Fields.yaml` file specifies particle fields and units, expressed using four
 Example `Fields.yaml`:
 
 ```yaml
-velocity: [0, 1, -1, 0],
+velocity: [0, 1, -1, 0]
 thermal_conductivity: [1, 1, -3, -1]
 ```
 
