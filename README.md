@@ -22,7 +22,7 @@
 
 ### **Particle Support**
 - Dynamically detects particle types and fields from `*_particles` directories.
-- Supports custom particle field units via `Fields.json`.
+- Supports custom particle field units via `Fields.yaml`.
 
 ## 3. Changes
 
@@ -80,26 +80,18 @@ dataset_folder/
 ├── Header
 ├── metadata.yaml
 ├── XXX_particles/     # Particle fields (e.g., Rad or Sink or CIC)
-│   ├── Fields.json    # Particle field names and units
+│   ├── Fields.yaml    # Particle field names and units
 │   ├── Header
 │   └── Level_0/
 ```
 
-The `Fields.json` file specifies particle fields and units, expressed using four fundamental units (`M`, `L`, `T`, and `Θ` for mass, length, time and temperature).
+The `Fields.yaml` file specifies particle fields and units, expressed using four fundamental units (`M`, `L`, `T`, and `Θ` for mass, length, time and temperature).
 
-Example `Fields.json`:
+Example `Fields.yaml`:
 
-```json
-{
-    "fields": {
-        "velocity": "",
-        "thermal_conductivity": ""
-    },
-    "units": {
-        "velocity": [0, 1, -1, 0],
-        "thermal_conductivity": [1, 1, -3, -1]
-    }
-}
+```yaml
+velocity: [0, 1, -1, 0],
+thermal_conductivity: [1, 1, -3, -1]
 ```
 
 ### **5.2 Loading a `QUOKKA` Dataset**
