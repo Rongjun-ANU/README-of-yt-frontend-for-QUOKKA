@@ -202,7 +202,7 @@ Load and visualize a dataset:
 ```python
 import yt
 
-ds = yt.load("path_to_quokka_output")
+ds = yt.load("path_to_quokka_dataset")
 ad = ds.all_data()
 ad['gas', 'density']
 
@@ -219,11 +219,12 @@ yt.set_log_level("DEBUG")
 
 If `metadata.yaml` is missing, you can create it manually or bypass metadata parsing:
 ```python
+import yt
 from yt.frontends.amrex.data_structures import QuokkaDataset
 
 class OldQuokkaDataset(QuokkaDataset):
     def _parse_metadata_file(self):
         pass
 
-ds = OldQuokkaDataset("path_to_your_old_quokka_data")
+ds = OldQuokkaDataset("path_to_your_old_quokka_dataset")
 ```
