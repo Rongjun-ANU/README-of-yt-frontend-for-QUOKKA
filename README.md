@@ -182,14 +182,14 @@ yt.SlicePlot(ds, 'z', ('gas', 'density'))
 
 ![gasDensity](https://github.com/Rongjun-ANU/ytdev.README/blob/main/gasDensity.png)
 
-For radiation fields, you may use the data with radiation fields (e.g., `ds = yt.load('/sample/RadBeam/plt007')`):
+To visualize radiation fields, you can load sample data using `ds = yt.load('/sample/RadBeam/plt007')`:
 ```python
 yt.SlicePlot(ds, 'z', ('rad', 'energy_density_0'))
 ```
 
 ![radEnergy](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radEnergy.png)
 
-For particles, you may use the data with particles (e.g., `ds = yt.load('/sample/RadiatingParticles/plt026')`):
+To visualize particles, you can load sample data using `ds = yt.load('/sample/RadiatingParticles/plt026')`:
 ```python
 yt.SlicePlot(ds, "z", ('rad', 'energy_density_0'), center='c').set_cmap(('rad', 'energy_density_0'), 'hot').annotate_particles(1, p_size=400., col='blue', marker='*', ptype='Rad_particles')
 ```
