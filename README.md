@@ -13,7 +13,7 @@
     - Optional fields, including temperature, scalar, radiation, and magnetic (currently a placeholder) fields 
   - **Units Management**:
     - Maps field names to (field_type, field_name) tuples, e.g., `('boxlib', 'gasDensity')` becomes `('gas', 'density')`.
-    - Assigns physical units to dimensionless (or `code_unit`) native fields.
+    - Assigns physical units to dimensionless (and/or `code_unit`) native fields.
 
 ### **Metadata Management**
 - Parses `Header` file for fields' information.
