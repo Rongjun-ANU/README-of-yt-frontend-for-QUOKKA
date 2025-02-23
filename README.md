@@ -98,7 +98,7 @@ thermal_conductivity: [1, 1, -3, -1]
 
 To load a `QUOKKA` dataset:
 ```python
-ds = yt.load("plt007")
+ds = yt.load("path_to_QUOKKA_data/plt_folder")
 ```
 
 To verify:
@@ -202,12 +202,14 @@ Load and visualize a dataset:
 ```python
 import yt
 
-ds = yt.load("path_to_quokka_dataset")
+ds = yt.load("path_to_QUOKKA_dataset/plt_folder")
 ad = ds.all_data()
 ad['gas', 'density']
 
 yt.SlicePlot(ds, 'z', ('gas', 'density'))
 ```
+
+Here, we provide two sample dataset under the `sample` folder: a regular `QUOKKA` dataset, `\sample\RadBeam`; and a dataset including particles, `\sample\RadiatingParticles`. 
 
 For debugging:
 ```python

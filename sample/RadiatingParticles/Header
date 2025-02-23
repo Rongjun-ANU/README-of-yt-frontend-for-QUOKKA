@@ -1,0 +1,28 @@
+HyperCLaw-V1.1
+10
+gasDensity
+x-GasMomentum
+y-GasMomentum
+z-GasMomentum
+gasEnergy
+gasInternalEnergy
+radEnergy-Group0
+x-RadFlux-Group0
+y-RadFlux-Group0
+z-RadFlux-Group0
+2
+0.15000000000000002
+0
+0 0 
+1 1 
+
+((0,0) (63,63) (0,0)) 
+32 
+0.015625 0.015625 
+0
+0
+0 1 0.15000000000000002
+32
+0 1
+0 1
+Level_0/Cell
