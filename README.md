@@ -180,21 +180,21 @@ Plot gas density on the x-y plane:
 yt.SlicePlot(ds, 'z', ('gas', 'density'))
 ```
 
-![gasDensity](https://github.com/Rongjun-ANU/ytdev.README/blob/main/gasDensity.png)
+![gasDensity](https://github.com/Rongjun-ANU/ytdev.README/blob/main/figures/gasDensity.png)
 
 To visualize radiation fields, you can load sample data using `ds = yt.load('/sample/RadBeam/plt007')`:
 ```python
 yt.SlicePlot(ds, 'z', ('rad', 'energy_density_0'))
 ```
 
-![radEnergy](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radEnergy.png)
+![radEnergy](https://github.com/Rongjun-ANU/ytdev.README/blob/main/figures/radEnergy.png)
 
 To visualize particles, you can load sample data using `ds = yt.load('/sample/RadiatingParticles/plt026')`:
 ```python
 yt.SlicePlot(ds, "z", ('rad', 'energy_density_0'), center='c').set_cmap(('rad', 'energy_density_0'), 'hot').annotate_particles(1, p_size=400., col='blue', marker='*', ptype='Rad_particles')
 ```
 
-![radParticle](https://github.com/Rongjun-ANU/ytdev.README/blob/main/radParticle.png)
+![radParticle](https://github.com/Rongjun-ANU/ytdev.README/blob/main/figures/radParticle.png)
 
 ## 6. Usage
 
