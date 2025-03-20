@@ -1,9 +1,14 @@
-a_rad: 1
-c_hat: 1
-c: 1
-G: 1
-unit_length: .nan
-unit_time: .nan
-k_B: 1
-unit_temperature: .nan
-unit_mass: .nan
+quokka_version: 25.03
+git_hash_quokka: 39c4b2609e7b114203d12fb7cb5772672e277f84
+git_hash_amrex: 06b4a5b105f5aebe66b987194fc9b5c207fae5ff
+units:
+  unit_length: .nan
+  unit_mass: .nan
+  unit_time: .nan
+  unit_temperature: .nan
+constants:
+  k_B: 1
+  G: 1
+  c: 100
+  c_hat: 10
+  a_rad: 1
