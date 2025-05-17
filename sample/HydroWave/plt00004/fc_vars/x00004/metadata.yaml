@@ -1,0 +1,11 @@
+quokka_version: 25.03
+git_hash_quokka: 35c8e9d15cf959c1fc9a6b38896ca599799b4998
+git_hash_amrex: d49d22968b403bc978749b5e2feb7c94a7710158
+units:
+  unit_length: 1
+  unit_mass: 1
+  unit_time: 1
+  unit_temperature: 1
+constants:
+  k_B: 1.3806488e-16
+  G: 6.67428e-08
