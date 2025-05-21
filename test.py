@@ -1,4 +1,5 @@
 import yt 
+import numpy as np
 
 def main():
 
@@ -37,6 +38,11 @@ def main():
     print(f"Face-centered x dataset fields: {ds.ds_fc_x.field_list}")
     # print(f"Face-centered y dataset fields: {ds.ds_fc_y.field_list}")
     # print(f"Face-centered z dataset fields: {ds.ds_fc_z.field_list}")
+
+    ad = ds.ds_fc_x.all_data()
+    field =  ('boxlib', 'x-RiemannSolverVelocity')
+    x_flux_array = np.array(ad[field])
+    assert isinstance(x_flux_array, np.ndarray)
 
     return
 
